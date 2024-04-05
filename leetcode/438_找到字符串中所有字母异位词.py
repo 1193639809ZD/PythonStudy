@@ -13,6 +13,24 @@ class Solution:
     #             ans.append(i)
     #     return ans
 
+    # 使用Counter当滑动窗口
+    # def findAnagrams(self, s: str, p: str) -> List[int]:
+    #     m, n = len(s), len(p)
+    #
+    #     ans = []
+    #     ass_dict, p = Counter(s[:n]), Counter(p)
+    #
+    #     if ass_dict == p:
+    #         ans.append(0)
+    #
+    #     for i in range(m - n):
+    #         ass_dict[s[i]] -= 1
+    #         ass_dict[s[i + n]] += 1
+    #         if ass_dict == p:
+    #             ans.append(i + 1)
+    #
+    #     return ans
+
     def findAnagrams(self, s: str, p: str) -> List[int]:
         n, m, res = len(s), len(p), []
         if n < m: return res

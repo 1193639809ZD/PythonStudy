@@ -1,13 +1,14 @@
 from typing import List
-import collections
+from collections import defaultdict
 
 
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
-        ans = collections.defaultdict(list)
+        # 将排序后的子串作为key，存入hash表中
+        ans = defaultdict(list)
 
-        for st in strs:
-            key = "".join(sorted(st))
-            ans[key].append(st)
+        for s in strs:
+            temp = "".join(sorted(s))
+            ans[temp].append(s)
 
         return list(ans.values())

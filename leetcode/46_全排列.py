@@ -3,23 +3,19 @@ from typing import List
 
 class Solution:
     def permute(self, nums: List[int]) -> List[List[int]]:
-        def dfs():
-            if len(path) == n:
-                res.append(path.copy())
+        def backtrack(comb):
+            if len(comb) == n:
+                res.append(comb)
                 return
 
             for i in range(n):
                 if not used[i]:
                     used[i] = True
-                    path.append(nums[i])
-                    dfs()
+                    backtrack(comb + [nums[i]])
                     used[i] = False
-                    path.pop()
 
         n = len(nums)
-        # 注意used的使用，是为了保证nums的数值读取正确
-        used = [False for _ in range(n)]
-        res = []
-        path = []
-        dfs()
+        # used的作用是防止重复读取
+        res, used = [], [False] * n
+        backtrack([])
         return res

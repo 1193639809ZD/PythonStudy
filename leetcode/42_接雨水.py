@@ -29,15 +29,14 @@ class Solution:
         ans = 0
         left, right = 0, len(height) - 1
         leftMax = rightMax = 0
-
         while left < right:
-            leftMax = max(leftMax, height[left])
-            rightMax = max(rightMax, height[right])
             # 如果leaf小于right，那么left最大的元素一定小于right，因为只有小于时才移动
             if height[left] < height[right]:
+                leftMax = max(leftMax, height[left])
                 ans += leftMax - height[left]
                 left += 1
             else:
+                rightMax = max(rightMax, height[right])
                 ans += rightMax - height[right]
                 right -= 1
 
