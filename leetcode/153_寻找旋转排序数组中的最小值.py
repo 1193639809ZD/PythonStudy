@@ -12,7 +12,6 @@ class Solution:
     # 二分查找
     def findMin(self, nums: List[int]) -> int:
         left, right = 0, len(nums) - 1
-        # 找最小值->升序区间，找最大值->降序区间
         while left < right:
             mid = (left + right) // 2
             if nums[mid] < nums[right]:

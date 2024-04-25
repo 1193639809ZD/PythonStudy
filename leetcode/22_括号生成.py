@@ -5,22 +5,16 @@ class Solution:
     def generateParenthesis(self, n: int) -> List[str]:
         ans = []
 
-        # left、right监控左右括号数量
         def backtrack(S, left, right):
-            # 回溯指标
+            # 回溯主体
             if len(S) == 2 * n:
-                ans.append(''.join(S))
+                ans.append("".join(S))
                 return
-            # 剪枝条件
+            # 回溯尝试
             if left < n:
-                S.append('(')
-                backtrack(S, left + 1, right)
-                S.pop()
-            # 剪枝条件
+                backtrack(S + ["("], left + 1, right)
             if right < left:
-                S.append(')')
-                backtrack(S, left, right + 1)
-                S.pop()
+                backtrack(S + [")"], left, right + 1)
 
         backtrack([], 0, 0)
         return ans
