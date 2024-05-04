@@ -15,6 +15,11 @@ class Solution:
             digits.insert(0, 1)
         return digits
 
+    # 调用库函数
+    # def plusOne(self, digits: List[int]) -> List[int]:
+    #     res = eval(''.join(map(str, digits))) + 1
+    #     return list(map(int, str(res)))
+
 
 if __name__ == '__main__':
     digits = [1, 9, 9]
