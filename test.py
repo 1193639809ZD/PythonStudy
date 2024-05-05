@@ -26,5 +26,5 @@ class MyNet(nn.Module):
 
 
 net = MyNet()
-
+print(net)
 # optimizer = optim.SGD()
