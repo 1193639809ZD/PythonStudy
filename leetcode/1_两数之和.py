@@ -31,6 +31,7 @@ if __name__ == '__main__':
     target = 9
 
     s = Solution()
+    print('test')
     print(f"nums: {nums}")
     print(f"target: {target}")
     print(f"answer: {s.twoSum(nums=nums, target=target)}")
