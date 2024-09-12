@@ -5,7 +5,7 @@
 
 # @Author: eveleaf
 # @Date: 2024-09-10 09:44
-# @LastEditTime: 2024-09-11 21:54
+# @LastEditTime: 2024-09-11 22:37
 # @Description:
 
 
@@ -19,10 +19,3 @@
 # print(f"1: {f.__next__()}")
 # print(f"2: {f.__next__()}")
 # print(f"3: {f.__next__()}")
-
-
-l = [4, "2", "3", 1]
-
-sorted(l)
-
-print(l)
