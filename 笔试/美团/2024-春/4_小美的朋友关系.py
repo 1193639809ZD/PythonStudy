@@ -1,6 +1,11 @@
 # @Author: eveleaf
 # @Date: 2024-09-12 13:40
-# @LastEditTime: 2024-09-12 13:40
+# @LastEditTime: 2024-09-12 16:31
+# @Description:
+
+# @Author: eveleaf
+# @Date: 2024-09-12 13:40
+# @LastEditTime: 2024-09-12 16:39
 # @Description: 图、联通节点、并查集
 
 # 题目：
@@ -23,29 +28,8 @@
 # initial_relationship = [[1, 2], [2, 3], [4, 5]]
 # events = [[1, 1, 5], [2, 1, 3], [2, 1, 4], [1, 1, 2], [2, 1, 3]]
 
-from dataStructure.union_find import UnionFind
 
-
-# class UnionFind:
-#     def __init__(self, n: int) -> None:
-#         self.parent = [i for i in range(n)]  # 位置i的元素记录其父节点下标
-
-#     # 查找根节点
-#     def find(self, i: int) -> int:
-#         if self.parent[i] == i:
-#             return i
-#         # 递归查找父节点
-#         self.parent[i] = self.find(self.parent[i])  # 完全压缩
-#         return self.parent[i]
-
-#     def merge(self, i: int, j: int):
-#         root_i = self.find(i)
-#         root_j = self.find(j)
-
-#         self.parent[root_i] = root_j
-
-#     def query(self, i: int, j: int) -> bool:
-#         return self.find(i) == self.find(j)
+from dataStructure import UnionFind
 
 
 n, m, q = map(int, input().split(" "))

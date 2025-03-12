@@ -1,6 +1,6 @@
 # @Author: eveleaf
-# @Date: 2024-08-17 11:30
-# @LastEditTime: 2024-08-17 11:30
+# @Date: 2024-08-27 09:32
+# @LastEditTime: 2024-11-08 11:33
 # @Description: 关于函数参数的说明
 
 
@@ -34,3 +34,4 @@ if __name__ == "__main__":
     # func3("hello")
     # func3("hello", "eveleaf", "kirto")
     func3("hello", *(3, 4), **{"n1": "eveleaf", "n2": "kirto"})
+    print("hello")
