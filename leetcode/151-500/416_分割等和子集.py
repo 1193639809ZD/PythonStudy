@@ -49,8 +49,8 @@ class Solution:
                 # 容量有限，无法选择第i个数字nums[i-1]
                 if j < nums[i - 1]:
                     dp[i][j] = dp[i - 1][j]
-                # 可选择第i个数字nums[i-1]，也可不选
                 else:
+                    # 不选nums[i-1]是dp[i - 1][j]，选择nums[i-1]是dp[i - 1][j - nums[i - 1]]，二者有一个为True即可
                     dp[i][j] = dp[i - 1][j] | dp[i - 1][j - nums[i - 1]]
 
         return dp[n][target]

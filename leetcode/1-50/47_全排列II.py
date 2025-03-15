@@ -9,10 +9,8 @@ class Solution:
                 return
 
             for i in range(len(nums)):
-                if used[i] == 1:
-                    continue
                 # 剪枝：如果一个元素与上一个元素相同，且上一个元素在当前循环中没有使用过，说明重复了
-                if i and nums[i] == nums[i - 1] and used[i - 1] == False:
+                if used[i] == True or (i and nums[i] == nums[i - 1] and used[i - 1] == False):
                     continue
                 used[i] = True
                 backtrack(comb + [nums[i]])
